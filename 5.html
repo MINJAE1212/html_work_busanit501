@@ -1,54 +1,103 @@
 <!DOCTYPE html>
- <html>
- <head>
+<html>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>WEB1 - 자기소개 </title>
- <meta charset="utf-8">
- </head>
- <body>
- 
- <style>
- h2, p{
-    border: 5px solid red;
- }
+    <title>WEB1 - 사진첩 </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
 
+<body>
+    <style>
+   h2{
+    padding-left: 20px;
+   }
+   .gallery {
+            display: grid;
+    padding-left: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
- .saw {
+        
 
-            border: 5px solid rgb(33, 18, 163);
+            gap: 20px;
+          
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+   
+        .container {
+            height: 1000px;
+      
+            display: flex;
+
+            flex-direction: column;
+            padding-left: 20px;
+        
+            justify-content: flex-start;
+            align-items: space-between;
+}
+
+.container img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
 
 
 
- </style>
- 
- 
- 
-    <h1><a href="index.html">WEB</a></h1>
- <ol>
- <li><a href="1.html">HTML</a></li>
- <li><a href="2.html">CSS</a></li>
- <li><a href="3.html">JavaScript</a></li>
- <li><a href="5.html">자기소개</a></li>
- </ol>
- 
- 
- 
- <h2>자기소개 무엇인가?</h2>
- <p><li><font color="red">이름 : 곽민재</font>
-</li>
-<li><font color="blue">주소 : 부산 사상구</font>
-</li>
-<li><font color="orange">나이 : 35</font>
-</li>
-<li><font color="red">취미 : 운동</font>
-</li>
-</p>
 
+
+        .box {
+            border: 1px solid red;
+            width: 200px;
+           
+        }
    
-    <img src="12345.jpg" class="saw" width="60%">
-    <p style="margin-top: 40px;">
-   
-    </body>
-    </html>
+       
+   </style>
+     
+    
+    <h1><a href="index.html">미니실습</a></h1>
+    <div id="grid">
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+            <li><a href="4.html">자기소개</a></li>
+            <li><a href="5.html">사진첩</a></li>
+        </ol>
+        <!--  -->
+         <div>
+            <h2>사진첩</h2>
+            <div class="gallery">
+           
+            <img src="img/1.jpg" alt="샘플사진1">
+            <img src="img/2.jpg" alt="샘플사진2">
+            <img src="img/3.jpg" alt="샘플사진3">
+            <img src="img/4.jpg" alt="샘플사진4">
+            <img src="img/5.jpg" alt="샘플사진5">
+            <img src="img/6.jpg" alt="샘플사진6">
+             </div>
+
+            <div class="container">
+                <h2>상품목록</h2>
+                <div class="box"><img src="img/1.jpg"></div>
+                <div class="box">Box 2</div>
+                <div class="box">Box 3</div>
+                <div class="box">Box 4</div>
+                <div class="box">Box 5</div>
+                <div class="box">Box 6</div> 
+            </div>
+            
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
