@@ -11,16 +11,16 @@
 
 <body>
     <style>
-   h2{
-    padding-left: 20px;
-   }
-   
-   
-   .gallery {
-    background-color: white;
+        h2 {
+            padding-left: 20px;
+        }
+
+
+        .gallery {
+            background-color: white;
             border-radius: 8px;
             padding: 50px;
-           
+
             transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -28,13 +28,13 @@
             gap: 20px;
         }
 
-           .gallery:hover {
+        .gallery:hover {
 
             background: 100px;
             background-color: aqua;
             transform: scale(1.03);
             margin-left: 35px;
-        
+
         }
 
 
@@ -44,25 +44,25 @@
             height: 200px;
             border-radius: 8px;
             display: block;
-           
+
             margin: 0 auto;
         }
-   
-       
+
+
 
         .container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 16px;
             padding: 16px;
-            border: 10px solid pink;
+            border: 5px solid palevioletred;
             margin-left: 16px;
         }
 
-     
+
         @keyframes fadeSlideIn {
 
- 
+
             0% {
                 opacity: 0;
                 transform: translateY(50px) scale(0.9) rotate(-20deg);
@@ -85,21 +85,26 @@
             border-radius: 8px;
             padding: 8px;
             text-align: center;
-         
+
             animation-name: fadeSlideIn;
             animation-duration: 2.5s;
             animation-timing-function: ease-in-out;
             animation-delay: 1.2s;
-            animation-iteration-count: infinite;
+            animation-iteration-count: 1;
             animation-direction: normal;
-            animation-fill-mode: both; 
+            animation-fill-mode: both;
             animation-play-state: running;
         }
 
         .box:hover {
             background-color: aqua;
+            /* transform: scale(1.03); */
+        }
+
+        .boxeff:hover {
             transform: scale(1.03);
         }
+
 
         .box img {
             width: 200px;
@@ -112,19 +117,13 @@
 
 
         .test1 {
-            border: 2px solid red;
-                        
-          
+            border: 2px solid greenyellow;
+
+
         }
-   
-   
-      
-        
-   
-       
-   </style>
-     
-    
+    </style>
+
+
     <h1><a href="index.html">미니실습</a></h1>
     <div id="grid">
         <ol>
@@ -136,25 +135,33 @@
             <li><a href="6.html">사진실습</a></li>
         </ol>
         <!--  -->
-         <div>
+        <div>
             <h2>사진첩 효과</h2>
             <div class="gallery">
-           
-            <img src="img/1.jpg" alt="샘플사진1">
-            <img src="img/2.jpg" alt="샘플사진2">
-            <img src="img/3.jpg" alt="샘플사진3">
-            <img src="img/4.jpg" alt="샘플사진4">
-            <img src="img/5.jpg" alt="샘플사진5">
-            <img src="img/6.jpg" alt="샘플사진6">
-            <img src="img/7.jpg" alt="샘플사진6">
-            <img src="img/8.jpg" alt="샘플사진6">
-             </div>
-             
-             <h2>사진첩 효과2</h2>
-          
-             <div class="container">
-                
-                <div class="box test1"><img src="img/1.jpg"></div>
+
+                <img src="img/1.jpg" alt="샘플사진1">
+                <img src="img/2.jpg" alt="샘플사진2">
+                <img src="img/3.jpg" alt="샘플사진3">
+                <img src="img/4.jpg" alt="샘플사진4">
+                <img src="img/5.jpg" alt="샘플사진5">
+                <img src="img/6.jpg" alt="샘플사진6">
+                <img src="img/7.jpg" alt="샘플사진6">
+                <img src="img/8.jpg" alt="샘플사진6">
+
+            </div>
+
+            <h2>사진첩 효과2</h2>
+
+            <div class="container">
+
+                <div class="box test1">
+                    <div class="boxeff">
+                        <img src="img/1.jpg">
+                    </div>
+                </div>
+
+
+
                 <div class="box test1"><img src="img/11.jpg"></div>
                 <div class="box test1"><img src="img/12.jpg"></div>
                 <div class="box test1"><img src="img/13.jpg"></div>
@@ -165,7 +172,7 @@
                 <div class="box test1"><img src="img/18.jpg"></div>
                 <div class="box test1"><img src="img/1.jpg"></div>
             </div>
-            
+
         </div>
     </div>
     </div>
