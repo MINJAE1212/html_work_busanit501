@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB1 - 사진첩 </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <style>
+   h2{
+    padding-left: 20px;
+   }
+   
+   
+   .gallery {
+    background-color: white;
+            border-radius: 8px;
+            padding: 50px;
+            text-align: center;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-left: 20px;
+            gap: 20px;
+        }
+
+           .gallery:hover {
+
+            background: 100px;
+            background-color: aqua;
+            transform: scale(1.03);
+            margin-left: 35px;
+        
+        }
+
+
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            display: block;
+           
+            margin: 0 auto;
+        }
+   
+       
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            padding: 16px;
+            border: 100px solid pink;
+            margin-left: 16px;
+        }
+
+     
+        @keyframes fadeSlideIn {
+
+ 
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.5) rotate(-50deg);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: translateY(10px) scale(1.1) rotate(20deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1) rotate(0deg);
+            }
+        }
+
+
+        .box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+         
+            animation-name: fadeSlideIn;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.2s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-fill-mode: both; 
+            animation-play-state: running;
+        }
+
+        .box:hover {
+            background-color: aqua;
+            transform: scale(1.03);
+        }
+
+        .box img {
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+
+        .test1 {
+            border: 2px solid red;
+                        
+          
+        }
+   
+   
+      
+        
+   
+       
+   </style>
+     
+    
+    <h1><a href="index.html">미니실습</a></h1>
+    <div id="grid">
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+            <li><a href="4.html">자기소개</a></li>
+            <li><a href="5.html">사진첩</a></li>
+            <li><a href="6.html">사진실습</a></li>
+        </ol>
+        <!--  -->
+         <div>
+            <h2>사진첩 효과</h2>
+            <div class="gallery">
+           
+            <img src="img/1.jpg" alt="샘플사진1">
+            <img src="img/2.jpg" alt="샘플사진2">
+            <img src="img/3.jpg" alt="샘플사진3">
+            <img src="img/4.jpg" alt="샘플사진4">
+            <img src="img/5.jpg" alt="샘플사진5">
+            <img src="img/6.jpg" alt="샘플사진6">
+             </div>
+             
+             <h2>사진첩 효과2</h2>
+          
+             <div class="container">
+                
+                <div class="box test1"><img src="img/1.jpg"></div>
+                <div class="box test1"><img src="img/1.jpg"></div>
+                <div class="box test1"><img src="img/1.jpg"></div>
+                <div class="box test1"><img src="img/1.jpg"></div>
+                <div class="box test1"><img src="img/1.jpg"></div>
+                <div class="box test1"><img src="img/1.jpg"></div>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
