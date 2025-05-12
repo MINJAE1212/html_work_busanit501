@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <!-- <input type="button" value="show" onclick="
+    document.querySelector('#sample1').style.display='inline'">
+   
+
+   <input type="button" value="hide" onclick="
+    document.querySelector('#sample1').style.display='none'">
+  
+    <img id="sample1" src="/12345.jpg" alt= "샘플이미지" width="30%"> -->
+
+
+
+
+
+<body>
+    <h1>이벤트 설정 및 적용하는 다양한 방법 </h1>
+    <img id="image1" src="/12345.jpg" alt= "샘플이미지" width="30%">
+   
+    <h2>1 HTML 태그 내 onXXX 속성 직접정의, 장점: 구현 간단, 단점:가독성, 재사용 안됨 </h2>
+  
+    <input type="button" value="show" onclick="
+    document.querySelector('#image1').style.display='inline'">
+   
+    <input type="button" value="hide" onclick="sayHi()">
+
+    
+
+
+    <h2>2 자바스크립트에서 element.onclick 직접 할당. 장점: 코드 분리, 단점: 중복 이벤트 설정 불가 </h2>
+    <input type="button" id="btn1" value="show">
+    <input type="button" id="btn2" value="hide">
+
+    
+   
+
+
+    <h2>3 addEventListener() 방식 권장, 강추!!장점: 하나의 요소에 여러 이벤트 등록 가능</h2>
+    <input type="button" id="btn3" value="show">
+    <input type="button" id="btn4" value="hide">
+    
+    
+
+    <h2>4 기본 함수를 ES6 화살표 함수로 변경해서 더 간단히 이용해보기.</h2>
+    <input type="button" id="btn5" value="show">
+    <input type="button" id="btn6" value="hide">
+
+   
+   <script>
+
+        function sayHi() {
+            document.querySelector('#image1').style.display='none'
+          
+        }
+     
+
+        document.getElementById('btn1').onclick = function () {
+             document.querySelector('#image1').style.display='inline'
+       
+     }
+        document.getElementById('btn2').onclick = function () {
+             document.querySelector('#image1').style.display='none'
+       
+     }
+
+
+      
+    
+
+        const btn = document.getElementById('btn3')
+     
+        btn.addEventListener('click',
+            function () {  document.querySelector('#image1').style.display='inline' })
+
+
+
+         const btn2 = document.getElementById('btn4')
+     
+        btn2.addEventListener('click',
+            function () {  document.querySelector('#image1').style.display='none' })
+
+
+
+
+
+
+        const handleClick = () => document.querySelector('#image1').style.display='inline'
+       
+        const btn3 = document.getElementById('btn5')
+          btn3.addEventListener('click', handleClick)
+       
+       
+
+     const dada = () => document.querySelector('#image1').style.display='none'
+          const btn4 = document.getElementById('btn6')
+         btn4.addEventListener('click', dada)
+
+   
+
+
+
+
+
+
+
+        
+
+    </script>
+</body>
+
+</html>
